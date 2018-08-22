@@ -54,4 +54,6 @@ $ php artisan migrate
 $ php artisan db:seed --class StateSeeder
 ```
 
+If you want this seeder to run when you execute `php artisan db:seed`, add `$this->call(StatesSeeder::class);` to the `run()` method of `DatabaseSeeder::class` *(`database/seeds/DatabaseSeeder.php`)*
+
 You'll now have a functional States database suitable for populating drop downs or whatever else you crazy kids do with your states tables.
